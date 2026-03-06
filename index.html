@@ -1208,7 +1208,7 @@ W16: TP期末互動式網頁競賽與頒獎`
                 const roleLabel = m.isLeader ? t.leader : t.member;
                 const roleBadgeStyle = m.isLeader 
                     ? 'background: var(--brand-green); color: #FFF; border: none;' 
-                    : 'background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border-light);';
+                    : 'background: var(--bg-tertiary); color: var(--text-primary); border: 1px solid var(--border-light);';
 
                 groupHTML += `
                     <div onclick="openStudentModal('${m.sid}')" class="hover-card group relative rounded-[2.5rem] overflow-hidden cursor-pointer shadow-md transition-colors duration-700" style="background: var(--bg-secondary); border: 1px solid var(--border-light);">
@@ -1217,9 +1217,9 @@ W16: TP期末互動式網頁競賽與頒獎`
                             <img src="${imgUrl}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 ${rotateClass}">
                             <div class="absolute inset-0 opacity-80 group-hover:opacity-100 transition-opacity duration-700" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);"></div>
                             <div class="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6">
-                                <h3 class="text-xl md:text-3xl font-black transition-colors duration-500 leading-tight mb-1" style="color: #FFF; font-family: var(--font-display);">${m.name}</h3>
-                                <p class="text-[10px] md:text-sm font-bold uppercase tracking-widest truncate" style="color: var(--brand-green-light); margin-bottom: 2px;">${m.dept}</p>
-                                <p class="text-[10px] md:text-sm font-semibold tracking-wider mt-1" style="color: rgba(255,255,255,0.7); font-family: var(--font-mono);">${m.sid}</p>
+                                <h3 class="text-xl md:text-3xl font-black transition-colors duration-500 leading-tight mb-1" style="color: #FFF; font-family: var(--font-display); text-shadow: 0 2px 4px rgba(0,0,0,0.8);">${m.name}</h3>
+                                <p class="text-[10px] md:text-sm font-bold uppercase tracking-widest truncate" style="color: #A7F3D0; margin-bottom: 2px; text-shadow: 0 1px 3px rgba(0,0,0,0.8);">${m.dept}</p>
+                                <p class="text-[10px] md:text-sm font-semibold tracking-wider mt-1" style="color: #FFFFFF; font-family: var(--font-mono); text-shadow: 0 1px 3px rgba(0,0,0,0.8);">${m.sid}</p>
                             </div>
                         </div>
                     </div>
@@ -1285,7 +1285,7 @@ W16: TP期末互動式網頁競賽與頒獎`
                     <div class="flex flex-col xl:flex-row justify-start items-start w-full mb-6 gap-6 xl:gap-12 pr-14 sm:pr-16">
                         <div class="flex-none">
                             <h3 class="text-2xl md:text-3xl font-black leading-tight mb-2" style="color: var(--text-primary); font-family: var(--font-display);">${student.name}</h3>
-                            <p class="font-bold text-sm tracking-wide uppercase" style="color: var(--brand-green);">${student.dept} • ${student.sid}</p>
+                            <p class="font-bold text-sm tracking-wide uppercase" style="color: var(--text-primary);"><span style="color: var(--brand-green);">${student.dept}</span> • ${student.sid}</p>
                             <div class="mt-3 inline-block px-3 py-1 rounded-full text-xs font-black tracking-widest" style="background: var(--bg-tertiary); color: var(--text-secondary); border: 1px solid var(--border-light);">${t.mbti}: ${student.mbti}</div>
                         </div>
                         
