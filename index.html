@@ -126,7 +126,7 @@
     .menu-section-title { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-tertiary); padding: 8px 24px; }
     .menu-item {
       display: flex; align-items: center; gap: 12px; padding: 10px 24px;
-      cursor: pointer; color: var(--text-secondary); font-size: 14px;
+      cursor: pointer; color: var(--text-secondary); font-size: 16px;
       font-weight: 500; transition: all var(--transition); text-decoration: none; border-left: 3px solid transparent;
     }
     .menu-item:hover, .menu-item.active-nav { background: var(--bg-tertiary); color: var(--text-primary); border-left-color: var(--brand-green); }
@@ -155,16 +155,14 @@
     .hero-meta { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; }
     .hero-meta-item { font-size: 12px; color: rgba(255, 255, 255, 0.5); font-weight: 500; letter-spacing: 0.5px; }
     .hero-meta-item strong { color: rgba(255, 255, 255, 0.9); font-weight: 600; }
-    .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); color: rgba(255, 255, 255, 0.4); font-size: 12px; text-align: center; animation: pulse 2s infinite; cursor: pointer; }
-    @keyframes pulse { 0%, 100% { opacity: 0.4 } 50% { opacity: 0.8 } }
     /* ═══ SECTION STYLES ═══ */
     .section { padding: 80px 24px; position: relative; }
     .section-alt { background: var(--bg-tertiary); }
-    .container { max-width: 700px; margin: 0 auto; }
+    .container { max-width: 640px; margin: 0 auto; } /* 已進一步縮窄版面 */
     .section-header { margin-bottom: 48px; }
     .section-num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--brand-green); letter-spacing: 2px; margin-bottom: 12px; }
-    .section-title { font-family: var(--font-display); font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--text-primary); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.3px; }
-    .section-lead { font-size: 17px; color: var(--text-secondary); max-width: 680px; line-height: 1.8; font-weight: 300; }
+    .section-title { font-family: var(--font-display); font-size: clamp(28px, 5vw, 42px); font-weight: 700; color: var(--text-primary); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.3px; }
+    .section-lead { font-size: 20px; color: var(--text-secondary); max-width: 680px; line-height: 1.8; font-weight: 400; }
     /* ═══ CARDS ═══ */
     .card { background: var(--bg-secondary); border-radius: var(--radius-md); border: 1px solid var(--border-light); padding: 28px; transition: all var(--transition); box-shadow: var(--shadow-sm); display: block; }
     .card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--brand-green); }
@@ -172,18 +170,18 @@
     .card-grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
     .card-grid-3 { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .card-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
-    .card-title { font-size: 18px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary); }
-    .card-body { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .card-title { font-size: 22px; font-weight: 700; margin-bottom: 8px; color: var(--text-primary); }
+    .card-body { font-size: 18px; color: var(--text-secondary); line-height: 1.7; }
     /* ═══ KEY FINDING BOX ═══ */
     .key-box { background: var(--brand-green-light); border-left: 4px solid var(--brand-green); border-radius: 0 var(--radius-md) var(--radius-md) 0; padding: 28px 32px; margin: 32px 0; }
-    .key-box h4 { font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--brand-green-dark); margin-bottom: 16px; }
+    .key-box h4 { font-family: var(--font-display); font-size: 22px; font-weight: 600; color: var(--brand-green-dark); margin-bottom: 16px; }
     [data-theme="dark"] .key-box h4 { color: var(--brand-green); }
     .key-box ol { padding-left: 20px; }
-    .key-box li { font-size: 15px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.7; }
+    .key-box li { font-size: 18px; color: var(--text-secondary); margin-bottom: 10px; line-height: 1.8; }
     /* ═══ DATA TABLE ═══ */
     .data-table-wrap { overflow-x: auto; margin: 24px 0; border-radius: var(--radius-md); border: 1px solid var(--border-light); }
-    .data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-    .data-table th { background: var(--accent-navy); color: #FFF; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.5px; white-space: nowrap; }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 18px; }
+    .data-table th { background: var(--accent-navy); color: #FFF; padding: 12px 16px; text-align: left; font-weight: 600; font-size: 15px; letter-spacing: 0.5px; white-space: nowrap; }
     [data-theme="dark"] .data-table th { background: #1B3A5C; }
     .data-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-secondary); vertical-align: top; }
     .data-table tr:nth-child(even) td { background: var(--bg-tertiary); }
@@ -207,19 +205,19 @@
     /* ═══ ACCORDION ═══ */
     .accordion { margin: 24px 0; }
     .acc-item { border: 1px solid var(--border-light); border-radius: var(--radius-md); margin-bottom: 8px; overflow: hidden; }
-    .acc-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); font-weight: 600; font-size: 15px; color: var(--text-primary); transition: background var(--transition); }
+    .acc-header { padding: 16px 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--bg-secondary); font-weight: 600; font-size: 17px; color: var(--text-primary); transition: background var(--transition); }
     .acc-header:hover { background: var(--bg-tertiary); }
     .acc-arrow { transition: transform var(--transition); font-size: 14px; color: var(--text-tertiary); }
     .acc-item.open .acc-arrow { transform: rotate(180deg); }
     .acc-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; background: var(--bg-secondary); }
-    .acc-body-inner { padding: 0 20px 20px; font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+    .acc-body-inner { padding: 0 20px 20px; font-size: 17px; color: var(--text-secondary); line-height: 1.7; }
     /* ═══ MATERIALS SECTION ═══ */
     .mat-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-    .mat-tab { padding: 8px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-medium); background: var(--bg-secondary); font-size: 13px; font-weight: 600; cursor: pointer; transition: all var(--transition); color: var(--text-secondary); }
+    .mat-tab { padding: 8px 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-medium); background: var(--bg-secondary); font-size: 16px; font-weight: 600; cursor: pointer; transition: all var(--transition); color: var(--text-secondary); }
     .mat-tab.active { background: var(--accent-navy); color: #FFF; border-color: var(--accent-navy); }
     [data-theme="dark"] .mat-tab.active { background: var(--brand-green); border-color: var(--brand-green); color: #FFF; }
     .mat-content { background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 28px; max-height: 500px; overflow-y: auto; }
-    .mat-content pre { white-space: pre-wrap; word-break: break-word; font-family: var(--font-body); font-size: 13px; line-height: 1.8; color: var(--text-secondary); }
+    .mat-content pre { white-space: pre-wrap; word-break: break-word; font-family: var(--font-body); font-size: 16px; line-height: 1.8; color: var(--text-secondary); }
     /* ═══ FOOTER ═══ */
     .footer { height: var(--footer-h); padding: 0 20px; display: flex; align-items: center; justify-content: space-between; background: var(--bg-secondary); border-top: 1px solid var(--border-light); font-size: 10px; color: var(--text-tertiary); transition: background var(--transition), border var(--transition); }
     .footer a { color: var(--text-tertiary); text-decoration: none; font-weight: 600; }
@@ -243,8 +241,8 @@
       .brand-tag { display: none; }
       .section { padding: 48px 16px; }
       .container { max-width: 100%; }
-      .data-table { font-size: 12px; }
-      .data-table th, .data-table td { padding: 8px 10px; }
+      .data-table { font-size: 16px; }
+      .data-table th, .data-table td { padding: 12px 12px; }
     }
     /* ═══ ANIMATIONS ═══ */
     .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
@@ -504,29 +502,29 @@
         </div>
         
         <div class="section-header fade-up" style="margin-top: 64px; margin-bottom: 24px;">
-          <h3 class="section-title" style="font-size: 24px;">特殊課外經驗</h3>
+          <h3 class="section-title" style="font-size: 28px;">特殊課外經驗</h3>
         </div>
         <div class="card-grid fade-up" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
           <div class="card hover-card" style="cursor: pointer; text-align: center; padding: 24px 16px;" onclick="openStudentModal('111108023')">
             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
               <img src="https://lh3.googleusercontent.com/u/0/d/1N6hNXwhX-l8AYY-2NIOQa-KJjKnin2X1" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" alt="吳櫂笙">
             </div>
-            <div class="card-title" style="margin-bottom: 4px; font-size: 16px;">吳櫂笙</div>
-            <div class="card-body" style="font-size: 13px;">海外暑期鞋廠實習</div>
+            <div class="card-title" style="margin-bottom: 4px; font-size: 20px;">吳櫂笙</div>
+            <div class="card-body" style="font-size: 16px;">海外暑期鞋廠實習</div>
           </div>
           <div class="card hover-card" style="cursor: pointer; text-align: center; padding: 24px 16px;" onclick="openStudentModal('112212020')">
             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
               <img src="https://lh3.googleusercontent.com/u/0/d/1Q4WBlo63t0VPK8TcjGnYq_No9qsAfm9P" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" alt="楊皓心">
             </div>
-            <div class="card-title" style="margin-bottom: 4px; font-size: 16px;">楊皓心</div>
-            <div class="card-body" style="font-size: 13px;">KPMG 工讀生</div>
+            <div class="card-title" style="margin-bottom: 4px; font-size: 20px;">楊皓心</div>
+            <div class="card-body" style="font-size: 16px;">KPMG 工讀生</div>
           </div>
           <div class="card hover-card" style="cursor: pointer; text-align: center; padding: 24px 16px;" onclick="openStudentModal('110407036')">
             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
               <img src="https://lh3.googleusercontent.com/u/0/d/1Nx0Bcn0f4txaWcqD0v8EpkYIpBxnPZZn" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" alt="王奕翔">
             </div>
-            <div class="card-title" style="margin-bottom: 4px; font-size: 16px;">王奕翔</div>
-            <div class="card-body" style="font-size: 13px;">YMCA / Bitget P2P</div>
+            <div class="card-title" style="margin-bottom: 4px; font-size: 20px;">王奕翔</div>
+            <div class="card-body" style="font-size: 16px;">YMCA / Bitget P2P</div>
           </div>
         </div>
 
@@ -617,7 +615,6 @@
               <tr>
                 <td><strong>語言鷹架 (化抽象為具體)</strong></td>
                 <td>策略管理的難點在於概念抽象，必須為學生搭建「將概念變成可說、可寫、可做」的鷹架：<br>
-                • <strong>一概念一口訣</strong>：每個策略框架配搭一個直白的判斷題（例：「如果在這些因素中只能選一個生死關鍵，會是什麼？為什麼？」）。<br>
                 • <strong>固定輸出模板</strong>：降低表達摩擦力，規定產出格式：「我們觀察到[現象]→代表[洞察]→因此建議[行動]→潛在風險是[風險]→驗證方式為[指標]。」<br>
                 • <strong>視覺化填空</strong>：提供流程圖或對照表，讓學生從「填格子」開始建立自信。</td>
               </tr>
@@ -1064,7 +1061,7 @@ W16: TP期末互動式網頁競賽與頒獎`
         { sid: "112212014", name: "余致緯", dept: "國企三", photo: "1ApydFSzBshaeP61PAYM7lvGe72pPUXEy", mbti: "N/A", bio: "蠻合群的好組員", experience: "無", motivation: "隨著ai的產業化，學習到更多這方面的經營與管理知識。", needs: "無", school: "惠文高中", admission: "個人申請、推甄", hometown: "", residence: "", youtubeId: "FCCgoeRP9Kw" },
         { sid: "112251035", name: "鄭光惠", dept: "管學三", photo: "1kVWXWD2ElzGhaQixLKAQHifPivDdyLx2", mbti: "ENFJ", bio: "想自由，但不逃避成長的人😋", experience: "吉他社 演辯社 熱舞社 合唱團 陶藝社/診所 家教 系辦工讀", motivation: "連續修了駱老師兩學期的課都覺得受益良多，跟老師討論比賽也覺得很有收穫！希望繼續跟老師學習，期許自己在這學期更進步", needs: "若有延伸學習資源或建議閱讀，也希望繼續推薦給我們！之前的延伸教材都很有內容～", school: "聖功女中/暨大管學", admission: "考試入學（如：分科測驗、考研）", hometown: "台南市", residence: "55008", youtubeId: "C7qwlqfj3oA" },
         { sid: "112104024", name: "陳品媃", dept: "外文三", photo: "1ZI-q8EROm2PACtUZTmC8fk8Y4mXRI9ab", mbti: "INTJ", bio: "對自己有很高期望的人", experience: "曾在補習班打工 也有在校內當工讀生", motivation: "一邊學習商業知識一邊訓練自己的英文口說能力跟聽力", needs: "目前無 如果在上課之後有問題會提出", school: "和美高中", admission: "繁星推薦", hometown: "彰化縣和美鎮", residence: "埔里鎮", youtubeId: "BOOMuHgsiUE" },
-        { sid: "112212034", name: "許峰嘉", dept: "國企三", photo: "1rBGHg6fIs-jJy_9uMT7UeFwuHBwMhAWK", mbti: "INFJ", bio: "願意為長期成果承擔短期壓力", experience: "荔枝採收員", motivation: "希望能學到策略選擇與資源配置還有建立競爭優勢的關鍵", needs: "無", school: "潮州高中/暨大國企", admission: "繁星推薦", hometown: "屏東縣", residence: "埔里鎮學府二巷6號", youtubeId: "3TSMPQ4f85w" },
+        { sid: "112212034", name: "許峰嘉", dept: "國企三", photo: "1rBGHg6fIs-jJy_9uMT7UeFwuHBwMhAWK", mbti: "INFJ", bio: "願意為長期成果承擔短期壓力", experience: "荔枝採收員", motivation: "希望能學到策略選擇與資源配置還有建立競爭優勢的關鍵", needs: "無", school: "潮州高中/暨大國企", admission: "繁星推薦", hometown: "屏ূপ屏東縣", residence: "埔里鎮學府二巷6號", youtubeId: "3TSMPQ4f85w" },
         { sid: "112212066", name: "陳淑君", dept: "國企三", photo: "1O0bZAZz15neM15ZIAisdVEuoGkNmvmGD", mbti: "INFP", bio: "安靜內向帶點慢熱屬性", experience: "在大學期間有過兩個月的打工經驗", motivation: "修習這門課一方面是因為這門課程是國企系的必修課程，另一方面是想透過這門課程去拓展自己的全球視野、加深自己對於企業全球布局策略的認知", needs: "目前沒有，未來如果在課程上遇到困難會在詢問教授以及助教", school: "永慶高中", admission: "考試入學（如：分科測驗、考研）", hometown: "嘉義縣新港鄉", residence: "埔里鎮上", youtubeId: "GMtIUSsd7t4" },
         { sid: "110407036", name: "王奕翔", dept: "教政四", photo: "1Nx0Bcn0f4txaWcqD0v8EpkYIpBxnPZZn", mbti: "ENFJ", bio: "個性比較外向一點", experience: "YMCA/Bitget P2P/", motivation: "我希望可以增加國際企業管理相關的知識，希望可以跨領域成功", needs: "（不確定）", school: "嶺東高中", admission: "考試入學（如：分科測驗、考研）", hometown: "南投埔里", residence: "南投埔里", youtubeId: "9wdy4obckgo" },
         { sid: "112212027", name: "蔡依伶", dept: "國企三", photo: "1qJkx2Rrk6IWxBttV3w6yKqAaYut9GmGJ", mbti: "ISFJ", bio: "腳踏實地，勤能補拙", experience: "寒暑假餐飲業打工", motivation: "修課動機：因為是系上必修因此選了這堂課<br>期待：不會太難理解，因為頭腦真的很不聰明，希望課後作業可以在三小時內完成", needs: "無", school: "安康高中/and暨大國企系", admission: "繁星推薦", hometown: "新北市", residence: "51234", youtubeId: "0PsOl9lJr-I" },
