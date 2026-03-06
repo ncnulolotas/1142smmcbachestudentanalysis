@@ -160,7 +160,7 @@
     /* ═══ SECTION STYLES ═══ */
     .section { padding: 80px 24px; position: relative; }
     .section-alt { background: var(--bg-tertiary); }
-    .container { max-width: 960px; margin: 0 auto; }
+    .container { max-width: 700px; margin: 0 auto; }
     .section-header { margin-bottom: 48px; }
     .section-num { font-family: var(--font-mono); font-size: 12px; font-weight: 500; color: var(--brand-green); letter-spacing: 2px; margin-bottom: 12px; }
     .section-title { font-family: var(--font-display); font-size: clamp(24px, 4vw, 36px); font-weight: 700; color: var(--text-primary); line-height: 1.2; margin-bottom: 16px; letter-spacing: -0.3px; }
@@ -262,6 +262,16 @@
         transform: translateY(-8px) scale(1.02);
         box-shadow: var(--shadow-lg);
     }
+    .sl-nav-btn {
+        background: var(--bg-secondary);
+        color: var(--text-secondary);
+        border: 1px solid var(--border-medium);
+    }
+    .sl-nav-btn.active {
+        background: var(--brand-green);
+        color: #FFF;
+        border-color: var(--brand-green);
+    }
   </style>
 </head>
 <body data-theme="light">
@@ -292,16 +302,16 @@
     </div>
     <div class="menu-section">
       <div class="menu-section-title">NAVIGATION</div>
-      <a class="menu-item active-nav" onclick="switchPage('hero')"><span class="num">00</span><span>首頁</span></a>
+      <a class="menu-item active-nav" onclick="switchPage('hero')"><span class="num">--</span><span>首頁</span></a>
       <a class="menu-item" onclick="switchPage('exec')"><span class="num">ES</span><span>Executive Summary</span></a>
-      <a class="menu-item" onclick="switchPage('sec1')"><span class="num">01</span><span>修課學生名單</span></a>
-      <a class="menu-item" onclick="switchPage('sec2')"><span class="num">02</span><span>班級概況：學生組成</span></a>
-      <a class="menu-item" onclick="switchPage('sec3')"><span class="num">03</span><span>班級概況：學習動機與期待</span></a>
-      <a class="menu-item" onclick="switchPage('sec4')"><span class="num">04</span><span>班級概況：課外經驗盤點</span></a>
-      <a class="menu-item" onclick="switchPage('sec5')"><span class="num">05</span><span>學生分群：學業階段</span></a>
-      <a class="menu-item" onclick="switchPage('sec6')"><span class="num">06</span><span>學生分群：動機類型</span></a>
-      <a class="menu-item" onclick="switchPage('sec7')"><span class="num">07</span><span>教學策略</span></a>
-      <a class="menu-item" onclick="switchPage('sec8')"><span class="num">08</span><span>潛在風險與防禦建議</span></a>
+      <a class="menu-item" onclick="switchPage('sec1')"><span class="num">00</span><span>修課學生名單</span></a>
+      <a class="menu-item" onclick="switchPage('sec2')"><span class="num">01</span><span>學生組成</span></a>
+      <a class="menu-item" onclick="switchPage('sec3')"><span class="num">02</span><span>學習動機與期待</span></a>
+      <a class="menu-item" onclick="switchPage('sec4')"><span class="num">03</span><span>課外經驗盤點</span></a>
+      <a class="menu-item" onclick="switchPage('sec5')"><span class="num">04</span><span>學業階段分群</span></a>
+      <a class="menu-item" onclick="switchPage('sec6')"><span class="num">05</span><span>修課動機分類</span></a>
+      <a class="menu-item" onclick="switchPage('sec7')"><span class="num">06</span><span>教學策略建議(僅供參考)</span></a>
+      <a class="menu-item" onclick="switchPage('sec8')"><span class="num">07</span><span>潛在風險與防禦建議(僅供參考)</span></a>
       <a class="menu-item" onclick="switchPage('materials')"><span class="num">⊕</span><span>原始資料</span></a>
     </div>
   </nav>
@@ -318,13 +328,10 @@
         <h1 class="hero-title">班級背景分析報告</h1>
         <p class="hero-subtitle">國際策略管理（學士班）課程學生背景問卷分析</p>
         <div class="hero-meta">
-          <div class="hero-meta-item"><strong>大三</strong> <span>為主體艦隊</span></div>
-          <div class="hero-meta-item"><strong>內向慢熱</strong> <span>班級特質</span></div>
-          <div class="hero-meta-item"><strong>25+ 人</strong> <span>具服務業經驗</span></div>
-          <div class="hero-meta-item"><strong>8 大面向</strong> <span>深度分析</span></div>
+          <div class="hero-meta-item"><strong>70+</strong> <span>位學生</span></div>
+          <div class="hero-meta-item"><strong>7 大面向</strong> <span>深度分析</span></div>
         </div>
       </div>
-      <div class="hero-scroll" onclick="switchPage('exec')">↓ <span>往下捲動觀看摘要</span></div>
     </section>
 
     <!-- EXECUTIVE SUMMARY (Page ES) -->
@@ -333,17 +340,14 @@
         <div class="section-header fade-up">
           <div class="section-num">EXECUTIVE SUMMARY</div>
           <h2 class="section-title">核心發現</h2>
-          <p class="section-lead">基於最新的學生問卷分析，我們針對班級的組成特質與潛在挑戰，總結出以下六大核心關鍵點。</p>
         </div>
         <div class="key-box fade-up">
           <h4>★ 重點摘要</h4>
           <ol>
             <li><strong>班級性格內向慢熱</strong>：超過半數學生在自述或 MBTI 中展現 I (內向) 特質，多數渴望遇到好組員與順暢的分組機制。</li>
-            <li><strong>大三為主力部隊</strong>：正值專業能力建構期的「大三」為絕對主力，需要可重複使用的分析步驟；其次為畢業導向的大四/大五學生。</li>
+            <li><strong>大三為主要修課群體</strong>：正值專業能力建構期的「大三」為絕對主力，需要可重複使用的分析步驟；其次為畢業導向的大四/大五學生。</li>
             <li><strong>多元動機交織</strong>：雖以必修學分驅動為主要動機，但學生普遍具備「能力成長導向」與「職涯發展導向」，渴望將抽象理論落地於商業實戰。</li>
-            <li><strong>具備豐富的服務業與行政經驗</strong>：高達 25+ 人擁有餐飲/門市第一線營運經驗，並有許多學生具備社團領導與校內行政經歷，可為個案討論帶來多元視角。</li>
-            <li><strong>亟需語言與決策鷹架</strong>：面對抽象的策略概念，建議透過「一概念一口訣」與「三段式個案推進」為學生搭建化抽象為具體的鷹架。</li>
-            <li><strong>必須建立行政防禦機制</strong>：針對外系生的資訊焦慮與潛在的搭便車問題，強烈建議建立單一資訊入口與嚴格的同儕評核制度。</li>
+            <li><strong>須提供語言與決策鷹架</strong>：面對抽象的策略概念，建議透過「三段式個案推進」為學生搭建化抽象為具體的鷹架。</li>
           </ol>
         </div>
         <div class="stat-strip fade-up">
@@ -369,16 +373,14 @@
 
     <!-- SECTION 01: 修課學生名單 -->
     <section class="page-section section section-alt" id="sec1">
-      <div class="container">
+      <div class="container" style="max-width: 1280px;"> <!-- 維持原樣的寬版面 -->
         <div class="section-header fade-up">
-          <div class="section-num">01 — STUDENT LIST</div>
+          <div class="section-num">00 — STUDENT LIST</div>
           <h2 class="section-title">修課學生名單</h2>
-          <p class="section-lead">本節提煉具備特殊課外經驗的指標性學生名單，這些經驗將是課堂專案與個案討論中，極具潛力的差異化觀點來源。</p>
         </div>
         
         <div id="student-list-container" class="w-full relative fade-up font-['Inter','Noto_Sans_TC',sans-serif]">
             
-            <!-- 新增：Sticky 容器，使其在滑動時維持在畫面上方 -->
             <div style="position: sticky; top: var(--header-h); z-index: 40; background: var(--bg-tertiary); padding: 16px 0; margin-top: -16px; border-bottom: 1px solid var(--border-light);" class="mb-6">
                 <div class="flex flex-col gap-4">
                     <div class="relative w-full md:max-w-md shrink-0">
@@ -410,9 +412,8 @@
     <section class="page-section section" id="sec2">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">02 — CLASS PROFILE: COMPOSITION</div>
-          <h2 class="section-title">班級概況：學生組成</h2>
-          <p class="section-lead">分析班級的主修結構、年級分布以及整體特質傾向，作為後續課程分組與進度安排的基礎。</p>
+          <div class="section-num">01 — STUDENT COMPOSITION</div>
+          <h2 class="section-title">學生組成</h2>
         </div>
         <div class="card-grid card-grid-3 fade-up">
           <div class="card">
@@ -438,9 +439,8 @@
     <section class="page-section section section-alt" id="sec3">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">03 — CLASS PROFILE: MOTIVATION & EXPECTATIONS</div>
-          <h2 class="section-title">班級概況：學習動機與期待</h2>
-          <p class="section-lead">學生雖多因必修而來，但對課程的實務應用與團隊運作抱有高度的具體期待。</p>
+          <div class="section-num">02 — MOTIVATION & EXPECTATIONS</div>
+          <h2 class="section-title">學習動機與期待</h2>
         </div>
         <div class="card-grid card-grid-2 fade-up">
           <div class="card">
@@ -471,9 +471,8 @@
     <section class="page-section section" id="sec4">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">04 — CLASS PROFILE: EXTRACURRICULAR EXPERIENCE</div>
-          <h2 class="section-title">班級概況：課外經驗盤點</h2>
-          <p class="section-lead">本班在「服務業」與「社團幹部」擁有極高的經驗覆蓋率，這些第一線經歷是策略分析極佳的實務柴火。</p>
+          <div class="section-num">03 — EXTRACURRICULAR EXPERIENCE</div>
+          <h2 class="section-title">課外經驗盤點</h2>
         </div>
         <div class="card-grid card-grid-3 fade-up">
           <div class="card">
@@ -505,11 +504,9 @@
         </div>
         
         <div class="section-header fade-up" style="margin-top: 64px; margin-bottom: 24px;">
-          <h3 class="section-title" style="font-size: 24px;">特殊經驗盤點</h3>
-          <p class="section-lead">除了大宗經驗外，部分學生具備相當特殊的實務背景，是課堂討論中極佳的差異化觀點來源。</p>
+          <h3 class="section-title" style="font-size: 24px;">特殊課外經驗</h3>
         </div>
         <div class="card-grid fade-up" style="grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));">
-          <!-- 修改處：直接呼叫 openStudentModal 即可，不用再轉跳分頁 -->
           <div class="card hover-card" style="cursor: pointer; text-align: center; padding: 24px 16px;" onclick="openStudentModal('111108023')">
             <div style="display: flex; justify-content: center; margin-bottom: 12px;">
               <img src="https://lh3.googleusercontent.com/u/0/d/1N6hNXwhX-l8AYY-2NIOQa-KJjKnin2X1" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" alt="吳櫂笙">
@@ -540,9 +537,8 @@
     <section class="page-section section section-alt" id="sec5">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">05 — CLUSTERS: ACADEMIC LEVEL</div>
-          <h2 class="section-title">學生分群：學業階段</h2>
-          <p class="section-lead">不同學業階段的學生在課程中尋求的目標與痛點截然不同，教學設計需照顧到這三個主要層次。</p>
+          <div class="section-num">04 — ACADEMIC LEVEL</div>
+          <h2 class="section-title">學業階段分群</h2>
         </div>
         <div class="data-table-wrap fade-up">
           <table class="data-table">
@@ -579,9 +575,8 @@
     <section class="page-section section" id="sec6">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">06 — CLUSTERS: MOTIVATION TYPES</div>
-          <h2 class="section-title">學生分群：動機類型</h2>
-          <p class="section-lead">透過對學習動機的分群，可更精準地規劃課程的作業負擔與加分激勵機制。</p>
+          <div class="section-num">05 — MOTIVATION TYPES</div>
+          <h2 class="section-title">修課動機分類</h2>
         </div>
         <div class="card-grid card-grid-3 fade-up">
           <div class="card">
@@ -607,9 +602,8 @@
     <section class="page-section section section-alt" id="sec7">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">07 — TEACHING STRATEGIES</div>
-          <h2 class="section-title">教學策略</h2>
-          <p class="section-lead">針對班級高度內向且對抽象理論感到棘手的特性，提出五項具體操作的教學策略。</p>
+          <div class="section-num">06 — TEACHING STRATEGIES</div>
+          <h2 class="section-title">教學策略建議(僅供參考)</h2>
         </div>
         <div class="data-table-wrap fade-up">
           <table class="data-table">
@@ -661,9 +655,8 @@
     <section class="page-section section" id="sec8">
       <div class="container">
         <div class="section-header fade-up">
-          <div class="section-num">08 — RISKS & ADMINISTRATIVE DEFENSES</div>
-          <h2 class="section-title">潛在風險與防禦建議</h2>
-          <p class="section-lead">預判課程中後期可能爆發的衝突與問題，並提前部署行政與評分防禦機制。</p>
+          <div class="section-num">07 — RISKS & ADMINISTRATIVE DEFENSES</div>
+          <h2 class="section-title">潛在風險與防禦建議(僅供參考)</h2>
         </div>
         <div class="data-table-wrap fade-up">
           <table class="data-table">
@@ -744,34 +737,84 @@
       `國際策略管理(SMMC)班級背景與教學策略分析報告
 
 1 班級概況
+
 1.1 學生組成
-• 主修結構: 高度集中於商管領域(以國企系、管院學士班為大宗),並有外文、公行、教政、東南亞等跨系與雙主修學生加入...
-• 年級分布: 以正值專業核心能力建構期的「大三」為絕對主力;其次為大四/大五...
-• 特質傾向: 班級整體偏向內向與慢熱。超過半數學生展現 I (內向) 特質...
+• 主修結構: 高度集中於商管領域(以國企系、管院學士班為大宗),並有外文、公行、教政、東南亞等跨系與雙主修學生加入,具備跨領域交流潛力。
+• 年級分布: 以正值專業核心能力建構期的「大三」為絕對主力;其次為面臨畢業與就業壓力的「大四/大五」學生;另有少量轉學生與海外僑生/外籍生(如來自馬來西亞)。
+• 特質傾向: 班級整體偏向內向與慢熱。超過半數學生在自述或MBTI 中展現I (內向)特質(如自評為社恐、安靜、慢熟、喜歡獨處),僅少數自述為活潑、外向或喜歡社交。
 
 1.2 學習動機與期待
-• 必修學分驅動: 順利通過、負擔可控。
-• 能力成長導向: 渴望將理論落地、建立決策思維。
-• 職涯發展導向: 期望實際應用於未來職場。
-• 團隊與行政期待: 渴望好組員與順暢分組運作。
+• 必修學分驅動: 多數同學的最基礎動機。主要訴求為「順利通過」、「負擔可控」以及「拿到畢業/雙主修學分」。
+• 能力成長導向: 渴望將理論落地。希望學習如何分析全球市場、建立決策思維,並將課本框架轉化為面對複雜決策時可用的工具。
+• 職涯發展導向: 著眼於未來實務。期望所學能實際應用於未來職場的商業判斷,甚至希望能藉此獲得教授的研究所或出國交換推薦信。
+• 團隊與行政期待: 由於內向個性使然,許多學生極度渴望「遇到好組員」與「順暢的分組運作」。外系生則特別強調「資訊同步」,希望避免因未收到Email 或漏看群組而產生資訊落差。
 
 1.3 課外經驗與特殊經驗盤點
-• 服務業與社團幹部經驗豐富(餐飲25+人、社團20+人)。
-• 特殊經驗: 吳耀笙(海外鞋廠實習)、楊皓心(KPMG工讀生)、王奕翔(Bitget P2P)、劉家(系上TA)、黃敬庭(教授助理/教練)...
+班級整體在「服務業」與「社團幹部」擁有極高的經驗覆蓋率,同時也潛藏著能為課堂帶來差異化視角的特殊經歷。
+
+• 大宗經驗基底:
+○ 餐飲/門市服務(約25+人): 涵蓋超商大夜、麥當勞、星巴克、飯店餐廳、手搖飲等第一線營運與客訴處理經驗。
+○ 社團領導與參與(約20+人):包含系學會(正副會長)、吉他、熱舞、童軍、辯論、管樂等,具備基礎的活動企劃與團隊協調概念。
+○ 校內行政工讀(約10+人): 熟悉學校行政流程與基礎文書處理。
+
+• 特殊經驗(課堂潛在的差異化貢獻點):
+○ 海外/國際實習: 吳耀笙(海外暑期鞋廠實習)。
+○ 商業專業/事務所: 楊皓心(KPMG工讀生)。
+○ 金融/交易平台: 王奕翔(YMCA/Bitget P2P)。
+○ 學術/教學支援: 劉家 (教育部學伴計畫、系上TA/RA)、黃敬庭(教授助理)。
+○ 教育/輔導類: 黃敬庭(游泳教練)、陳莉媜(補習班老師)、羅芊柔(幼兒園老師)、林詩芸(基金會課輔教師)。
 
 2 學生分群
-2.1 學業階段分群 (大三、大四/五、跨系)
-2.2 動機類型分群 (任務完成、能力成長、職涯導向)
+
+2.1 學業階段分群
+• 大三群體(主力艦隊): 正處於探索未來方向的階段。需要「可重複使用的分析步驟」,期待老師示範如何將抽象的策略概念轉為具體可操作的判斷依據。
+• 大四/大五群體(衝刺群體): 畢業導向明確,時間成本意識極高。需要的是「整合既有知識並形成決策輸出」的捷徑與模板,而非僅停留在概念探討。
+• 跨系/雙主修群體(外圍節點): 擁有不同學科背景,但也最容易感到孤立與焦慮。需要「商管概念的快速對齊」以及明確的「分組融入機制」(如清晰的角色分工),以消除資訊落差。
+
+2.2 動機類型分群
+• 任務完成型: 求生欲強,以順利完成課程、負擔在可控範圍內為核心訴求。
+• 能力成長型: 實戰欲強,期望鍛鍊策略分析、批判思考與口語結構化輸出能力。
+• 職涯導向型: 應用導向,高度關注實務應用、未來履歷價值與潛在的升學資源。
 
 3 教學策略
-3.1 語言鷹架 (一概念一口訣、固定輸出模板)
-3.2 個案教學 (描述層、解釋層、決策層)
-3.3 團隊合作 (明確角色分工)
-3.4 AI 整合 (界定為研究助手)
-3.5 課堂氛圍 (由小到大、降低門檻)
+
+3.1 語言鷹架(化抽象為具體)
+策略管理的難點在於概念抽象,必須為學生搭建「將概念變成可說、可寫、可做」的鷹架:
+• 一概念一口訣: 每個策略框架配搭一個直白的判斷題。例如:「如果在這些因素中只能選一個生死關鍵,會是什麼?為什麼?」
+• 固定輸出模板: 降低思考與表達的摩擦力。統一規定討論產出格式:「我們觀察到[現象]→代表[洞察]→因此建議[行動]→潛在風險是[風險]→ 驗證方式為[指標]。」
+• 視覺化填空: 提供流程圖或對照表,讓學生從「填格子」開始建立自信,再逐步擴寫成完整論述。
+
+3.2 個案教學(從描述推進到決策)
+避免學生將個案報告寫成單純的企業歷史簡介,建議採用三段式強制推進法:
+1. 描述層(What): 強制用 3句話精煉說明產業情境、競爭壓力與核心困境。
+2. 解釋層(Why): 釐清因果關係,找出造成困境的關鍵限制條件。
+3. 決策層(How): 強制做出取捨。提出2-3個策略選項,選擇其一,並交代捨棄其他選項的理由與風險控管機制。
+
+3.3 團隊合作(防堵搭便車與孤立)
+針對內向特質與分組焦慮,導入結構化的團隊管理機制:
+• 明確角色分工: 小組內必須劃分資料蒐集、框架建模、簡報敘事、QA 防禦等具體角色。
+• 每週微型交付: 將期末專題(TP)拆解為每週可檢查的微小進度(如一頁Coggle 或三行結論),避免期末死線前的崩潰與推諉。
+
+3.4 AI 整合(定位為研究助手與表達教練)
+明確界定 Gemini、NotebookLM 等 AI工具的使用邊界,強調其為「過程輔助」而非「最終答案」:
+• 要求學生利用AI 將大量雜亂資料快速收斂為「可討論的要點」。
+• 課堂嚴格規範: 任何由 AI輔助產出的策略結論,都必須由學生親自交代「背後的邏輯假設」與「替代方案」,避免直接複製貼上失去批判性思考。
+
+3.5 課堂氛圍(低壓高參與)
+面對佔半數以上的內向、慢熟學生,摒棄高壓點名,改採漸進式引導:
+• 由小到大: 永遠先進行小組內部的安全討論,再由代表向全班發表。
+• 降低發言門檻: 將課堂發言設計為「請用一句話回應剛剛那組的觀點」或利用匿名便利貼提問,藉此提升全班的參與覆蓋率。
 
 4 潛在風險與行政防禦建議
-資訊落差(建單一入口)、進度失控(同儕評核)、產出流於表面(評分傾斜於邏輯推演)。`,
+
+• 資訊落差與焦慮: 外系生與內向學生極易錯漏資訊。
+○ 防禦機制:建立「單一資訊入口」(如Moodle 或專屬網頁)。每週固定時間發布「本週重點與下週任務」,並特別標註「外系/請假者注意事項」。建立FAQ 頁面處理常見的分組與作業格式問題。
+
+• 進度失控與搭便車: 動機落差會在中後期引爆小組衝突。
+○ 防禦機制: 嚴格執行同儕評核與過程紀錄(要求保留討論會議紀要或協作版本紀錄),讓個人貢獻度具備可追溯的客觀證據。
+
+• 產出流於表面: 學生可能過度依賴 AI 或只停留在課本名詞解釋。
+○ 防禦機制:評分標準必須大幅傾斜於「決策的邏輯推演」、「具體條件分析」與「風險評估」,而非僅看資料的豐富度與排版。`,
 
       `SMMC 2026 Spring
 Updated: 2026/02/22
@@ -1095,6 +1138,7 @@ W16: TP期末互動式網頁競賽與頒獎`
     let parsedData = [];
     let studentsMap = new Map();
     let studentScrollObserver = null;
+    let modalReturnPage = null; // 用於記錄模態框關閉後要跳回的頁面
 
     function initStudentData() {
         RAW_INDIVIDUALS.forEach(ind => {
@@ -1218,7 +1262,8 @@ W16: TP期末互動式網頁競賽與頒獎`
         }
     }
 
-    function openStudentModal(sid) {
+    function openStudentModal(sid, returnPage = null) {
+        modalReturnPage = returnPage;
         const student = studentsMap.get(sid);
         if(!student) return;
         const t = STUDENT_I18N['ZH'];
@@ -1319,6 +1364,12 @@ W16: TP期末互動式網頁競賽與頒獎`
     function closeStudentModal() {
         document.getElementById('sl-modal-container').classList.add('hidden');
         document.body.classList.remove('sl-modal-open');
+        
+        // 若有記錄返回頁面，則在關閉時切換回去
+        if (modalReturnPage) {
+            switchPage(modalReturnPage);
+            modalReturnPage = null; // 清除記錄
+        }
     }
 
     function setupStudentScrollSpy() {
@@ -1335,10 +1386,8 @@ W16: TP期末互動式網頁競賽與頒獎`
                     const btn = document.getElementById('sl-nav-btn-' + id);
                     const nav = document.getElementById('sl-group-nav');
                     if (btn && nav) {
-                        // 優化：精準計算，讓選中的按鈕滾動到導覽列的正中間
-                        const scrollPos = btn.offsetLeft - (nav.clientWidth / 2) + (btn.clientWidth / 2);
                         nav.scrollTo({
-                            left: scrollPos,
+                            left: btn.offsetLeft - nav.offsetWidth / 2 + btn.offsetWidth / 2,
                             behavior: 'smooth'
                         });
                         updateNavButtonsStyle(id);
